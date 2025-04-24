@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Certificados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciar Certificados</h1>
+
+    <!-- Formulário para adicionar certificado -->
+    <form id="certificado-form">
+      <input type="text" id="titulo" placeholder="Título do Certificado" required>
+      <input type="text" id="instituicao" placeholder="Instituição" required>
+      <input type="date" id="data" required>
+      <input type="file" id="arquivo" accept=".pdf,.png,.jpg" required>
+      <button type="submit">Adicionar Certificado</button>
+    </form>
+
+    <!-- Lista de certificados -->
+    <h2>Meus Certificados</h2>
+    <ul id="lista-certificados"></ul>
+
+    <button onclick="voltar()">Voltar à Página Inicial</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
