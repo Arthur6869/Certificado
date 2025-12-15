@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+/* Custom styles and small animations */
+.btn-animated {
+	box-shadow: 0 8px 20px rgba(99,102,241,0.12);
+}
+
+@keyframes arrow-move {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(6px); }
+	100% { transform: translateX(0); }
+}
+.animate-arrow {
+	display: inline-block;
+	animation: arrow-move 1.2s ease-in-out infinite;
+}
+
+/* subtle pulse on hover */
+.btn-animated:hover {
+	box-shadow: 0 12px 30px rgba(59,130,246,0.18);
+}
+
+/* Keep main UI minimal and white */
+body { background: #ffffff; }
+
+/* skeleton helper */
+.skeleton {
+	background: linear-gradient(90deg, rgba(243,244,246,1) 25%, rgba(229,231,235,1) 50%, rgba(243,244,246,1) 75%);
+	background-size: 200% 100%;
+	animation: shimmer 1.6s linear infinite;
+}
+
+@keyframes shimmer {
+	0% { background-position: 200% 0; }
+	100% { background-position: -200% 0; }
+}
+
+/* Details list style for welcome */
+.welcome-details li { margin-left: 0.25rem }
+
+
